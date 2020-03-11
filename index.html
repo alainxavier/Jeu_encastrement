@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Le jeu</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  </head>
+  <body>
+    <header><!-- Entête de la zone considérée --></header>
+
+    <nav><!-- Nav. principale de la page -> site --></nav>
+
+    <aside><!-- Les à-cotés de la page --></aside>
+
+    <article><!-- Contenu textuel de la page -->
+      
+      
+      <div id="zone_jeu" >
+        <audio preload="auto" id="music">
+          <source src="audios/encastrement.mp3" type="audio/mpeg">
+        </audio>
+        <audio preload="auto" id="bruit" >
+            <source src="audios/bruits.mp3" type="audio/mpeg">
+        </audio> 
+        <div id="debut">
+          <h1>Bienvenue sur mon jeu d'encastrement des lettres</h1>
+          <b><u>Description du jeu</u></b><br>Ce jeu comporte :
+            <ul>              
+              <li>
+                un cube à lettres (le cube ne doit pas toucher le tableau)
+              </li>
+              <li>
+                un tableau (qui affiche une lettre à la fois)
+              </li>
+              <li>
+                une piste
+              </li>
+            </ul>
+          <b>Consigne pour jouer : </b><br>Taper au clavier la lettre apparaissant sur le tableau avant que le cube à lettre n'atteigne le tableau. <br><span class="rouge">Attention! Seule la première frappe du clavier est pris en compte.</span>
+          <button id="demarrer">Jouer</button>
+          <button id="arreter" style="display:none">Arrêter</button>
+        </div>        
+          <img id="rebours">
+        <div id="jeu">
+          <div id="titre" style="display:none">
+            <h1>Encastrement</h1>
+            <p id="consigne">Taper la lettre qui s'affiche sur le tableau</p>
+          </div>
+          <div id="score_z">Score : <span class="score">0</span> point(s)</div>  
+          <img id="lettre" src="images/cube.gif" height="170px">
+          <img id="tableau" src="images/tableau.png" height="300px">
+          <img id="piste" src="images/piste.png" class="piste">
+        </div>
+        <div id="echec" style="display:none">
+          <h2>Tu as perdu !</h2>
+          <h2>Ton score<br><span class="score">0</span> point(s)</h2>
+          <button class="rejouer">Rejouer</button>
+        </div>
+        <div id="fin" style="display:none">
+            <h1>Bravo ! Tu as réussi.</h1>
+            <h2>Ton score<br><span class="score">0</span> point(s)</h2>
+            <button class="rejouer">Rejouer</button>
+        </div>        
+      </div>
+      <textarea id="clavier" rows="1" cols="120"></textarea>
+    </article>
+
+    <footer><!-- Pied-de-page de la page -> site -->
+    </footer> 
+
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
